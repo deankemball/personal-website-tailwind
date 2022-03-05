@@ -1,0 +1,27 @@
+{
+  "name": "personal-website-tailwind",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deanwallflower/personal-website-tailwind.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deanwallflower/personal-website-tailwind/issues"
+  },
+  "homepage": "https://github.com/deanwallflower/personal-website-tailwind#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "parcel": "^2.3.2",
+    "postcss": "^8.4.7",
+    "tailwindcss": "^3.0.23"
+  }
+}
