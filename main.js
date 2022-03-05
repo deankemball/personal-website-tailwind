@@ -1,5 +1,6 @@
 // ABOUT TEXT DROPDOWN //
 // const dwButton = document.getElementById("dw-button")
+const header = document.getElementById("header")
 // const homeButton = document.getElementById("home")
 const aboutButton = document.getElementById("about")
 const aboutTextDropdown = document.getElementById("about-text")
@@ -9,6 +10,24 @@ const contactButton = document.getElementById("contact")
 const contactDropdown = document.getElementById("contact-form")
 // const navBar = document.getElementById("navbar")
 
+// HIDE HEADER ON FORM ENTRY
+const userName = document.getElementById("userName")
+const userEmail = document.getElementById("userEmail")
+const userMessage = document.getElementById("userMessage")
+
+const userNameClassList = Array.from(userName.classList)
+const userEmailClassList = Array.from(userEmail.classList)
+const userMessageClassList = Array.from(userMessage.classList)
+
+function hideHeader () {
+  header.classList.add("h-0")
+  header.classList.add("overflow-hidden")
+}
+
+userName.addEventListener("focusin", hideHeader);
+userEmail.addEventListener("focusin", hideHeader);
+userMessage.addEventListener("focusin", hideHeader);
+
 function selected () {
   aboutButton.classList.toggle("text-shadow");
   // contactButton.classList.remove("text-shadow");
@@ -16,6 +35,7 @@ function selected () {
 }
 
 function showAboutDropdown () {
+  console.log(userNameClassList)
   aboutTextDropdown.classList.toggle("h-0");
   // dwButton.classList.toggle("dw-button-dropdown");
   // if(contactDropdownClassList.includes("h-0")) { 
@@ -64,6 +84,8 @@ function showContactDropdown () {
   // dwButton.classList.remove("selected");
   aboutTextDropdown.classList.remove("text-shadow");
   aboutTextDropdown.classList.add("h-0");
+  header.classList.remove("h-0")
+  header.classList.remove("overflow-hidden")
   // if(aboutTextClassList.includes("h-0")) { 
     
   // } else {

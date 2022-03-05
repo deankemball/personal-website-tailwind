@@ -27,11 +27,11 @@
       <section id="two" class="snap-center w-screen h-screen items-center justify-center flex-grow-0 flex-shrink-0 basis-auto bg-green-500"></section>
       <section id="two" class="snap-center w-screen h-screen items-center justify-center flex-grow-0 flex-shrink-0 basis-auto bg-yellow-400"></section>
       <div class="font-robo text-white w-screen h-screen">
-        <div class="fixed top-6 left-6 right-6">
+        <div id="header" class="fixed top-6 left-6 right-6 transition-transform">
           <div id="dw-button" class="bg-neutral-800/75 border-dashed border-2 border-red-500 drop-shadow select-none">
             <h1 class="text-3xl font-semibold p-6">dean<br />wallflower</h1>
           </div>
-          <div id="about-text" class="transition duration-300 ease-out overflow-hidden h-0">
+          <div id="about-text" class="transition-transform duration-300 ease-out overflow-hidden h-0">
             <div class="bg-neutral-800/75 space-y-2 p-6 border-dashed border-2 border-red-500 drop-shadow select-none">
               <p>is a media artist specialising in graphics and visual effects.</p>
               <p>
@@ -47,15 +47,15 @@
         </div>
         <div id="contact-desktop" class="hidden">contact</div>
         <div class="fixed bottom-6 left-6 right-6">
-          <div id="contact-form" class="transition duration-300 ease-out overflow-hidden h-0">
+          <div id="contact-form" class="transition-transform duration-300 ease-out overflow-hidden h-0">
             <form class="flex flex-col p-6 space-x-1 bg-neutral-800/75 border-dashed border-2 border-red-500 gap-3 drop-shadow">
               <input type="hidden" name="contact_number" />
               <label><p>name</p></label>
-              <input type="text" name="user_name" class="bg-transparent border-solid border-2 border-red-500 active:shadow-inner hover:shadow-inner"/>
+              <input id="userName" type="text" name="user_name" class="bg-transparent border-solid border-2 border-red-500 active:shadow-inner hover:shadow-inner"/>
               <label><p>e-mail</p></label>
-              <input type="email" name="user_email" class="bg-transparent border-solid border-2 border-red-500 active:shadow-inner hover:shadow-inner"/>
+              <input id="userEmail" type="email" name="user_email" class="bg-transparent border-solid border-2 border-red-500 active:shadow-inner hover:shadow-inner"/>
               <label><p>message</p></label>
-              <textarea name="message" class="bg-transparent border-solid border-2 border-red-500 active:shadow-inner hover:shadow-inner"></textarea>
+              <textarea id="userMessage" name="message" class="bg-transparent border-solid border-2 border-red-500 active:shadow-inner hover:shadow-inner"></textarea>
               <button id="send-button" class="clickable" type="submit">send</button>
             </form>
           </div>
