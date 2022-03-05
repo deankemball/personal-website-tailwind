@@ -21,65 +21,69 @@
     <title>dean wallflower</title>
   </head>
   <body>
-    <div id="bg" class="snap-mandatory snap-x w-screen h-screen flex flex-nowrap items-center overflow-y-hidden overflow-x-scroll">
+    <div id="bg" class="snap-mandatory snap-x w-screen h-screen flex flex-nowrap items-center overflow-y-hidden overflow-x-scroll tracking-wider">
       <section id="one" class="flex snap-center w-screen h-screen items-center justify-center flex-grow-0 flex-shrink-0 basis-auto bg-red-500 pt-44 pb-28">
-        <div id="info-1" class="h-full relative translate-y-[100vh] transition-transform bg-neutral-800/75 space-y-2 p-6 border-dashed border-2 border-red-500 select-none font-semibold font-robo mx-6 shadow-md">
+        <div id="info-1" class="h-full relative translate-y-[100vh] transition-transform duration-300 bg-neutral-800/75 space-y-2 p-6 border-dashed border-2 border-red-500 select-none font-robo mx-6 shadow-md text-white tracking-wider">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nisi, voluptatibus nam, odio sequi recusandae velit debitis ratione consequuntur obcaecati fugiat ducimus officiis nesciunt omnis minus magni corporis repellendus repellat.
           </p>
         </div>
       </section>
       <section id="two" class="flex snap-center w-screen h-screen items-center justify-center flex-grow-0 flex-shrink-0 basis-auto bg-blue-500 pt-44 pb-28">
-        <div id="info-2" class="h-full relative translate-y-[100vh] transition-transform bg-neutral-800/75 space-y-2 p-6 border-dashed border-2 border-red-500 select-none font-semibold font-robo mx-6 shadow-md">
+        <div id="info-2" class="h-full relative translate-y-[100vh] transition-transform duration-300 bg-neutral-800/75 space-y-2 p-6 border-dashed border-2 border-red-500 select-none font-robo mx-6 shadow-md text-white tracking-wider">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nisi, voluptatibus nam, odio sequi recusandae velit debitis ratione consequuntur obcaecati fugiat ducimus officiis nesciunt omnis minus magni corporis repellendus repellat.
           </p>
         </div>
       </section>
       <section id="three" class="flex snap-center w-screen h-screen items-center justify-center flex-grow-0 flex-shrink-0 basis-auto bg-green-500 pt-44 pb-28">
-        <div id="info-3" class="h-full relative translate-y-[100vh] transition-transform bg-neutral-800/75 space-y-2 p-6 border-dashed border-2 border-red-500 select-none font-semibold font-robo mx-6 shadow-md">
+        <div id="info-3" class="h-full relative translate-y-[100vh] transition-transform duration-300 bg-neutral-800/75 space-y-2 p-6 border-dashed border-2 border-red-500 select-none font-robo mx-6 shadow-md text-white tracking-wider">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nisi, voluptatibus nam, odio sequi recusandae velit debitis ratione consequuntur obcaecati fugiat ducimus officiis nesciunt omnis minus magni corporis repellendus repellat.
           </p>
         </div>
       </section>
       <section id="four" class="flex snap-center w-screen h-screen items-center justify-center flex-grow-0 flex-shrink-0 basis-auto bg-yellow-400 pt-44 pb-28">
-        <div id="info-4" class="h-full relative translate-y-[100vh] transition-transform bg-neutral-800/75 space-y-2 p-6 border-dashed border-2 border-red-500 select-none font-semibold font-robo mx-6 shadow-md">
+        <div id="info-4" class="h-full relative translate-y-[100vh] transition-transform duration-300 bg-neutral-800/75 space-y-2 p-6 border-dashed border-2 border-red-500 select-none font-robo mx-6 shadow-md text-white tracking-wider">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nisi, voluptatibus nam, odio sequi recusandae velit debitis ratione consequuntur obcaecati fugiat ducimus officiis nesciunt omnis minus magni corporis repellendus repellat.
           </p>
         </div>
       </section>
       <div class="font-robo text-white w-screen h-screen tracking-wider">
         <div id="header" class="fixed top-6 left-6 right-6 transition-transform">
-          <div id="dw-button" class="bg-neutral-800/75 border-dashed border-2 border-red-500 shadow-md select-none">
+          <div id="dw" class="bg-neutral-800/75 border-dashed border-l-2 border-t-2 border-r-2 border-b-2 border-red-500 shadow-md select-none">
             <h1 class="text-3xl font-semibold p-6">dean<br />wallflower</h1>
           </div>
-          <div id="about-text" class="transition-transform duration-300 ease-out overflow-hidden h-0 shadow-md">
-            <div class="bg-neutral-800/75 space-y-2 p-6 border-dashed border-2 border-red-500 select-none">
-              <p>is a media artist specialising in graphics and visual effects.</p>
-              <p>
-                the generative art pieces are created in code and can be made
-                audio-reactive.
-              </p>
-              <p>
-                this makes them perfect for video installations, music videos,
-                background visuals for performance, or content for social media.
-              </p>
+          <div class="overflow-hidden">
+            <div id="about-text" class="-translate-y-[100vh] transition-transform duration-300 ease-out overflow-hidden shadow-md">
+              <div class="bg-neutral-800/75 space-y-2 p-6 border-dashed border-l-2 border-b-2 border-r-2 border-red-500 select-none">
+                <p>is a media artist specialising in graphics and visual effects.</p>
+                <p>
+                  the generative art pieces are created in code and can be made
+                  audio-reactive.
+                </p>
+                <p>
+                  this makes them perfect for video installations, music videos,
+                  background visuals for performance, or content for social media.
+                </p>
+              </div>
             </div>
           </div>
         </div>
         <div id="contact-desktop" class="hidden">contact</div>
         <div class="fixed bottom-6 left-6 right-6">
-          <div id="contact-form" class="transition-transform duration-300 ease-out overflow-hidden h-0">
-            <form class="flex flex-col p-6 space-x-1 bg-neutral-800/75 border-dashed border-2 border-red-500 gap-3 shadow-md">
-              <input type="hidden" name="contact_number" />
-              <label><p>name</p></label>
-              <input id="userName" type="text" name="user_name" class="bg-transparent border-solid border-2 border-red-500 focus:shadow-inner focus:outline-none hover:shadow-inner hover:cursor-pointer"/>
-              <label><p>e-mail</p></label>
-              <input id="userEmail" type="email" name="user_email" class="bg-transparent border-solid border-2 border-red-500 focus:shadow-inner focus:outline-none hover:shadow-inner hover:cursor-pointer"/>
-              <label><p>message</p></label>
-              <textarea id="userMessage" name="message" class="bg-transparent border-solid border-2 border-red-500 focus:shadow-inner focus:outline-none hover:shadow-inner hover:cursor-pointer"></textarea>
-              <button id="send-button" class="shadow-md font-semibold border-solid border-2 border-red-500 py-4 hover:cursor-pointer hover:text-shadow" type="submit">send</button>
-            </form>
+          <div class="overflow-hidden">
+            <div id="contact-form" class="translate-y-[100vh] transition-transform duration-300 ease-out overflow-hidden shadow-md">
+              <form class="flex flex-col p-6 space-x-1 bg-neutral-800/75 border-dashed border-l-2 border-t-2 border-r-2 border-red-500 gap-3 shadow-md">
+                <input type="hidden" name="contact_number" />
+                <label><p>name</p></label>
+                <input id="userName" type="text" name="user_name" class="bg-transparent border-solid border-2 border-red-500 focus:shadow-inner focus:outline-none hover:shadow-inner hover:cursor-pointer"/>
+                <label><p>e-mail</p></label>
+                <input id="userEmail" type="email" name="user_email" class="bg-transparent border-solid border-2 border-red-500 focus:shadow-inner focus:outline-none hover:shadow-inner hover:cursor-pointer"/>
+                <label><p>message</p></label>
+                <textarea id="userMessage" name="message" class="bg-transparent border-solid border-2 border-red-500 focus:shadow-inner focus:outline-none hover:shadow-inner hover:cursor-pointer"></textarea>
+                <button id="send-button" class="shadow-md font-semibold border-solid border-2 border-red-500 py-4 hover:cursor-pointer hover:text-shadow" type="submit">send</button>
+              </form>
+            </div>
           </div>
-          <div id="navbar" class="flex justify-center font-semibold bg-neutral-800/75 border-dashed border-2 border-red-500 shadow-md hover:cursor-pointer">
+          <div id="navbar" class="flex justify-center font-semibold bg-neutral-800/75 border-dashed border-l-2 border-t-2 border-r-2 border-b-2 border-red-500 shadow-md hover:cursor-pointer">
             <div id="home" class="hidden select-none">home</div>
             <div id="about" class="text-center w-1/2 py-4 select-none hover:text-shadow">about</div>
             <div id="reel" class="hidden select-none">reel</div>

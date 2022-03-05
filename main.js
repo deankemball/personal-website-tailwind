@@ -1,11 +1,27 @@
+const header = document.getElementById("header")
+const aboutButton = document.getElementById("about")
+const aboutTextDropdown = document.getElementById("about-text")
+const contactButton = document.getElementById("contact")
+const contactDropdown = document.getElementById("contact-form")
+const dw = document.getElementById("dw")
+
+// const homeButton = document.getElementById("home")
+// const contactButtonDesktop = document.getElementById("contact-desktop")
+const navBar = document.getElementById("navbar")
+
+// const bg = document.getElementById('bg')
+// bg.addEventListener("click", clear, true)
+
+var currentInfoBoxId = "info-1";
+document.getElementById(currentInfoBoxId).classList.add("translate-y-[100vh]")
+
+
 // SWIPE UP GESTURE DETECTION
 let touchstartY = 0
 let touchendY = 0
 let touchstartX = 0
 let touchendX = 0
 
-const bg = document.getElementById('bg')
-var currentInfoBoxId = "info-1";
 
 function swipeVertical() {
   if (Math.abs(touchendX - touchstartX) > 20) return;
@@ -24,8 +40,21 @@ bg.addEventListener('touchend', e => {
   swipeVertical()
 })
 
+function swipeUp() {
+  document.getElementById(currentInfoBoxId).classList.remove("translate-y-[100vh]")
+  document.getElementById(currentInfoBoxId).addEventListener("click", swipeDown, true)
+  aboutTextDropdown.classList.add("-translate-y-[100vh]")
+  contactDropdown.classList.add("translate-y-[100vh]")
+  setTimeout(dw.classList.add("border-b-2"), 500)
+}
+function swipeDown() {
+  document.getElementById(currentInfoBoxId).classList.add("translate-y-[100vh]")
+  navBar.classList.add("border-t-2");
+}
+
 function swipeHorizontal() {
   if (Math.abs(touchendY - touchstartY) > 20) return;
+  swipeDown()
   if (touchendX < touchstartX) setTimeout(swipeLeft, 700);
   if (touchendX > touchstartX) setTimeout(swipeRight, 700);
   }
@@ -41,69 +70,45 @@ bg.addEventListener('touchend', e => {
   swipeHorizontal()
 })
 
-function swipeUp() {
-  document.getElementById(currentInfoBoxId).classList.remove("translate-y-[100vh]")
-}
-function swipeDown() {
-  document.getElementById(currentInfoBoxId).classList.add("translate-y-[100vh]")
-}
 function swipeLeft() {
   scrollX = bg.scrollLeft
   currentInfoBoxId = `info-${Math.floor(scrollX / window.innerWidth + 1)}`
-  console.log(currentInfoBoxId)
 }
 function swipeRight() {
   scrollX = bg.scrollLeft
   currentInfoBoxId = `info-${Math.floor(scrollX / window.innerWidth + 1)}`
-  console.log(currentInfoBoxId)
 }
 
 // ABOUT TEXT DROPDOWN //
-const header = document.getElementById("header")
-// const homeButton = document.getElementById("home")
-const aboutButton = document.getElementById("about")
-const aboutTextDropdown = document.getElementById("about-text")
-
-const contactButton = document.getElementById("contact")
-// const contactButtonDesktop = document.getElementById("contact-desktop")
-const contactDropdown = document.getElementById("contact-form")
-// const navBar = document.getElementById("navbar")
-
-function selected () {
+function showAboutDropdown () {
+  aboutTextDropdown.classList.toggle("-translate-y-[100vh]");
+  contactDropdown.classList.add("translate-y-[100vh]")
   aboutButton.classList.toggle("text-shadow");
   contactButton.classList.remove("text-shadow");
-}
-
-function showAboutDropdown () {
-  aboutTextDropdown.classList.toggle("h-0");
-  contactDropdown.classList.add("h-0")
-  contactButton.classList.remove("text-shadow");
+  navBar.classList.add("border-t-2");
+  dw.classList.toggle("border-b-2")
   header.classList.remove("h-0")
   header.classList.remove("overflow-hidden")
   document.getElementById(currentInfoBoxId).classList.add("translate-y-[100vh]")
 
   
 }
-aboutButton.addEventListener("click", selected);
 aboutButton.addEventListener("click", showAboutDropdown);
 
 // CONTACT FORM DROPDOWN //
 
-function selected2 () {
+function showContactDropdown () {
+  navBar.classList.toggle("border-t-2");
+  contactDropdown.classList.toggle("translate-y-[100vh]");
+  aboutTextDropdown.classList.add("-translate-y-[100vh]");
+  setTimeout(dw.classList.add("border-b-2"), 500)
   contactButton.classList.toggle("text-shadow");
   aboutButton.classList.remove("text-shadow");
-}
-
-function showContactDropdown () {
-  contactDropdown.classList.toggle("h-0");
-  aboutTextDropdown.classList.remove("text-shadow");
-  aboutTextDropdown.classList.add("h-0");
   header.classList.remove("h-0")
   header.classList.remove("overflow-hidden")
   document.getElementById(currentInfoBoxId).classList.add("translate-y-[100vh]")
 }
 
-contactButton.addEventListener("click", selected2);
 contactButton.addEventListener("click", showContactDropdown);
 
 
@@ -122,18 +127,18 @@ userName.addEventListener("focusin", hideHeader);
 userEmail.addEventListener("focusin", hideHeader);
 userMessage.addEventListener("focusin", hideHeader);
 
-// function goHome () {
-//   aboutTextDropdown.classList.remove("about-text-dropdown");
-//   aboutButton.classList.remove("selected");
-//   dwButton.classList.remove("selected");
-//   reelLeftButton.classList.remove("carat-popup");
-//   reelRightButton.classList.remove("carat-popup");
-//   contactDropdown.classList.remove("contact-form-dropdown");
-//   contactButton.classList.remove("selected");
-//   reelNav.classList.remove("selected");
-  
-  
+// function clear () {
+//   aboutTextDropdown.classList.add("h-0");
+//   aboutButton.classList.remove("text-shadow");
+//   contactDropdown.classList.add("h-0")
+//   contactButton.classList.remove("text-shadow");
+//   document.getElementById(currentInfoBoxId).classList.add("translate-y-[100vh]")
 // }
+
+  // reelLeftButton.classList.remove("carat-popup");
+  // reelRightButton.classList.remove("carat-popup");
+  // contactDropdown.classList.remove("contact-form-dropdown");
+  // reelNav.classList.remove("selected");
 
 // homeButton.addEventListener("click", goHome);
 
@@ -155,9 +160,7 @@ userMessage.addEventListener("focusin", hideHeader);
 
 // CLICK OUTSIDE TO RETURN //
 // window.onclick = function(event) {
-//   if  (!event.target.classList.contains("deanwallflower") &&
-//     aboutTextDropdown.classList.contains("about-text-dropdown")
-//   ) {
-//     aboutTextDropdown.classList.remove("about-text-dropdown");
+//   if  (!event.target == aboutButton && !aboutTextDropdown.classList.contains("h-0")) {
+//     clear();
 //   }
 // }
