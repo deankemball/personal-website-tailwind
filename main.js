@@ -4,16 +4,14 @@
 const aboutButton = document.getElementById("about")
 const aboutTextDropdown = document.getElementById("about-text")
 
-let aboutTextClassList = Array.from(aboutTextDropdown.classList);
 const contactButton = document.getElementById("contact")
 // const contactButtonDesktop = document.getElementById("contact-desktop")
 const contactDropdown = document.getElementById("contact-form")
-let contactDropdownClassList = Array.from(contactDropdown.classList);
 // const navBar = document.getElementById("navbar")
 
 function selected () {
   aboutButton.classList.toggle("text-shadow");
-  contactButton.classList.remove("text-shadow");
+  // contactButton.classList.remove("text-shadow");
   // dwButton.classList.toggle("selected");
 }
 
@@ -55,7 +53,7 @@ aboutButton.addEventListener("click", showAboutDropdown);
 
 function selected2 () {
   contactButton.classList.toggle("text-shadow");
-  aboutButton.classList.remove("text-shadow");
+  // aboutButton.classList.remove("text-shadow");
 }
 
 function showContactDropdown () {
