@@ -1,8 +1,10 @@
 const header = document.getElementById("header")
 const aboutButton = document.getElementById("about")
 const aboutTextDropdown = document.getElementById("about-text")
+const aboutTextWrapper = document.getElementById("about-text-wrapper")
 const contactButton = document.getElementById("contact")
 const contactDropdown = document.getElementById("contact-form")
+const contactFormWrapper = document.getElementById("contact-form-wrapper")
 const dw = document.getElementById("dw")
 
 // const homeButton = document.getElementById("home")
@@ -21,7 +23,6 @@ let touchstartY = 0
 let touchendY = 0
 let touchstartX = 0
 let touchendX = 0
-
 
 function swipeVertical() {
   if (Math.abs(touchendX - touchstartX) > 20) return;
@@ -45,11 +46,11 @@ function swipeUp() {
   document.getElementById(currentInfoBoxId).addEventListener("click", swipeDown, true)
   aboutTextDropdown.classList.add("-translate-y-[100vh]")
   contactDropdown.classList.add("translate-y-[100vh]")
-  setTimeout(dw.classList.add("border-b-2"), 500)
+  aboutTextWrapper.classList.add("h-0");
+  header.classList.remove("-translate-y-[100vh]")
 }
 function swipeDown() {
   document.getElementById(currentInfoBoxId).classList.add("translate-y-[100vh]")
-  navBar.classList.add("border-t-2");
 }
 
 function swipeHorizontal() {
@@ -81,14 +82,12 @@ function swipeRight() {
 
 // ABOUT TEXT DROPDOWN //
 function showAboutDropdown () {
+  aboutTextWrapper.classList.toggle("h-0");
   aboutTextDropdown.classList.toggle("-translate-y-[100vh]");
-  contactDropdown.classList.add("translate-y-[100vh]")
+  contactDropdown.classList.add("translate-y-[100vh]");
+  contactFormWrapper.classList.add("h-0")
   aboutButton.classList.toggle("text-shadow");
   contactButton.classList.remove("text-shadow");
-  navBar.classList.add("border-t-2");
-  dw.classList.toggle("border-b-2")
-  header.classList.remove("h-0")
-  header.classList.remove("overflow-hidden")
   document.getElementById(currentInfoBoxId).classList.add("translate-y-[100vh]")
 
   
@@ -98,15 +97,15 @@ aboutButton.addEventListener("click", showAboutDropdown);
 // CONTACT FORM DROPDOWN //
 
 function showContactDropdown () {
-  navBar.classList.toggle("border-t-2");
+  contactFormWrapper.classList.toggle("h-0");
   contactDropdown.classList.toggle("translate-y-[100vh]");
   aboutTextDropdown.classList.add("-translate-y-[100vh]");
-  setTimeout(dw.classList.add("border-b-2"), 500)
+  aboutTextWrapper.classList.add("h-0");
   contactButton.classList.toggle("text-shadow");
   aboutButton.classList.remove("text-shadow");
-  header.classList.remove("h-0")
-  header.classList.remove("overflow-hidden")
   document.getElementById(currentInfoBoxId).classList.add("translate-y-[100vh]")
+  header.classList.remove("-translate-y-[100vh]")
+
 }
 
 contactButton.addEventListener("click", showContactDropdown);
@@ -119,21 +118,35 @@ const userMessage = document.getElementById("userMessage")
 
 
 function hideHeader () {
-  header.classList.add("h-0")
-  header.classList.add("overflow-hidden")
+  header.classList.add("-translate-y-[100vh]")
 }
 
 userName.addEventListener("focusin", hideHeader);
 userEmail.addEventListener("focusin", hideHeader);
 userMessage.addEventListener("focusin", hideHeader);
 
-// function clear () {
-//   aboutTextDropdown.classList.add("h-0");
-//   aboutButton.classList.remove("text-shadow");
-//   contactDropdown.classList.add("h-0")
-//   contactButton.classList.remove("text-shadow");
-//   document.getElementById(currentInfoBoxId).classList.add("translate-y-[100vh]")
-// }
+function clear () {
+  aboutTextDropdown.classList.add("-translate-y-[100vh]");
+  aboutButton.classList.remove("text-shadow");
+  contactDropdown.classList.add("translate-y-[100vh]")
+  contactButton.classList.remove("text-shadow");
+  document.getElementById(currentInfoBoxId).classList.add("translate-y-[100vh]")
+  header.classList.remove("-translate-y-[100vh]")
+}
+
+window.onclick = function(event) {
+  if (event.target.classList.contains("clear-item")) {
+    clear()
+  }
+}
+
+function home () {
+  bg.scrollTo({ left: 0, behavior: 'smooth' })
+  currentInfoBoxId = "info-1"
+  console.log("go home")
+}
+
+dw.addEventListener("click", home)
 
   // reelLeftButton.classList.remove("carat-popup");
   // reelRightButton.classList.remove("carat-popup");
@@ -157,10 +170,3 @@ userMessage.addEventListener("focusin", hideHeader);
 
 // reelNav.addEventListener("click", selected3);
 // reelNav.addEventListener("click", showReelButtons);
-
-// CLICK OUTSIDE TO RETURN //
-// window.onclick = function(event) {
-//   if  (!event.target == aboutButton && !aboutTextDropdown.classList.contains("h-0")) {
-//     clear();
-//   }
-// }

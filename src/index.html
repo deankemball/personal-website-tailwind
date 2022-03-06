@@ -20,40 +20,39 @@
     <script src="../main.js" defer></script>
     <title>dean wallflower</title>
   </head>
-  <body>
+  <body class="overflow-auto">
     <div id="bg" class="snap-mandatory snap-x w-screen h-screen flex flex-nowrap items-center overflow-y-hidden overflow-x-scroll tracking-wider">
-      <section id="one" class="flex snap-center w-screen h-screen items-center justify-center flex-grow-0 flex-shrink-0 basis-auto bg-red-500 pt-44 pb-28">
+      <section id="one" class="clear-item flex snap-center w-screen h-screen items-center justify-center flex-grow-0 flex-shrink-0 basis-auto bg-red-500 pt-44 pb-28">
         <div id="info-1" class="h-full relative translate-y-[100vh] transition-transform duration-300 bg-neutral-800/75 space-y-2 p-6 border-dashed border-2 border-red-500 select-none font-robo mx-6 shadow-md text-white tracking-wider">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nisi, voluptatibus nam, odio sequi recusandae velit debitis ratione consequuntur obcaecati fugiat ducimus officiis nesciunt omnis minus magni corporis repellendus repellat.
+          <p>Red Specific Text</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nisi, voluptatibus nam, odio sequi recusandae velit debitis ratione consequuntur obcaecati fugiat ducimus officiis nesciunt omnis minus magni corporis repellendus repellat.
           </p>
         </div>
       </section>
-      <section id="two" class="flex snap-center w-screen h-screen items-center justify-center flex-grow-0 flex-shrink-0 basis-auto bg-blue-500 pt-44 pb-28">
+      <section id="two" class="clear-item flex snap-center w-screen h-screen items-center justify-center flex-grow-0 flex-shrink-0 basis-auto bg-blue-500 pt-44 pb-28">
         <div id="info-2" class="h-full relative translate-y-[100vh] transition-transform duration-300 bg-neutral-800/75 space-y-2 p-6 border-dashed border-2 border-red-500 select-none font-robo mx-6 shadow-md text-white tracking-wider">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nisi, voluptatibus nam, odio sequi recusandae velit debitis ratione consequuntur obcaecati fugiat ducimus officiis nesciunt omnis minus magni corporis repellendus repellat.
+          <p>Blue Specific Text</p><p></p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nisi, voluptatibus nam, odio sequi recusandae velit debitis ratione consequuntur obcaecati fugiat ducimus officiis nesciunt omnis minus magni corporis repellendus repellat.
           </p>
         </div>
       </section>
-      <section id="three" class="flex snap-center w-screen h-screen items-center justify-center flex-grow-0 flex-shrink-0 basis-auto bg-green-500 pt-44 pb-28">
+      <section id="three" class="clear-item flex snap-center w-screen h-screen items-center justify-center flex-grow-0 flex-shrink-0 basis-auto bg-green-500 pt-44 pb-28">
         <div id="info-3" class="h-full relative translate-y-[100vh] transition-transform duration-300 bg-neutral-800/75 space-y-2 p-6 border-dashed border-2 border-red-500 select-none font-robo mx-6 shadow-md text-white tracking-wider">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nisi, voluptatibus nam, odio sequi recusandae velit debitis ratione consequuntur obcaecati fugiat ducimus officiis nesciunt omnis minus magni corporis repellendus repellat.
+          <p>Green Specific Text</p><p></p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nisi, voluptatibus nam, odio sequi recusandae velit debitis ratione consequuntur obcaecati fugiat ducimus officiis nesciunt omnis minus magni corporis repellendus repellat.
           </p>
         </div>
       </section>
-      <section id="four" class="flex snap-center w-screen h-screen items-center justify-center flex-grow-0 flex-shrink-0 basis-auto bg-yellow-400 pt-44 pb-28">
+      <section id="four" class="clear-item flex snap-center w-screen h-screen items-center justify-center flex-grow-0 flex-shrink-0 basis-auto bg-yellow-400 pt-44 pb-28">
         <div id="info-4" class="h-full relative translate-y-[100vh] transition-transform duration-300 bg-neutral-800/75 space-y-2 p-6 border-dashed border-2 border-red-500 select-none font-robo mx-6 shadow-md text-white tracking-wider">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nisi, voluptatibus nam, odio sequi recusandae velit debitis ratione consequuntur obcaecati fugiat ducimus officiis nesciunt omnis minus magni corporis repellendus repellat.
+          <p>Yellow Specific Text</p><p></p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nisi, voluptatibus nam, odio sequi recusandae velit debitis ratione consequuntur obcaecati fugiat ducimus officiis nesciunt omnis minus magni corporis repellendus repellat.
           </p>
         </div>
       </section>
       <div class="font-robo text-white w-screen h-screen tracking-wider">
-        <div id="header" class="fixed top-6 left-6 right-6 transition-transform">
-          <div id="dw" class="bg-neutral-800/75 border-dashed border-l-2 border-t-2 border-r-2 border-b-2 border-red-500 shadow-md select-none">
+        <div id="header" class="fixed top-6 left-6 right-6 transition-transform h-6">
+          <div id="dw" class="bg-neutral-800/75 border-dashed border-2 border-red-500 shadow-md select-none">
             <h1 class="text-3xl font-semibold p-6">dean<br />wallflower</h1>
           </div>
-          <div class="overflow-hidden">
-            <div id="about-text" class="-translate-y-[100vh] transition-transform duration-300 ease-out overflow-hidden shadow-md">
-              <div class="bg-neutral-800/75 space-y-2 p-6 border-dashed border-l-2 border-b-2 border-r-2 border-red-500 select-none">
+          <div id="about-text-wrapper" class="h-0">
+            <div id="about-text" class="clear-item home bg-neutral-800/75 border-dashed border-red-500 border-l-2 border-r-2 border-b-2 -translate-y-[100vh] transition-transform duration-300 ease-out space-y-2 p-6 select-none shadow-md">
                 <p>is a media artist specialising in graphics and visual effects.</p>
                 <p>
                   the generative art pieces are created in code and can be made
@@ -63,15 +62,14 @@
                   this makes them perfect for video installations, music videos,
                   background visuals for performance, or content for social media.
                 </p>
-              </div>
             </div>
           </div>
         </div>
         <div id="contact-desktop" class="hidden">contact</div>
         <div class="fixed bottom-6 left-6 right-6">
-          <div class="overflow-hidden">
-            <div id="contact-form" class="translate-y-[100vh] transition-transform duration-300 ease-out overflow-hidden shadow-md">
-              <form class="flex flex-col p-6 space-x-1 bg-neutral-800/75 border-dashed border-l-2 border-t-2 border-r-2 border-red-500 gap-3 shadow-md">
+          <div id="contact-form-wrapper" class="h-0">
+            <div id="contact-form" class="translate-y-[100vh] transition-transform duration-300 ease-out shadow-md bg-neutral-800/75 border-dashed border-red-500 border-l-2 border-r-2 border-t-2">
+              <form class="flex flex-col p-6 space-x-1 gap-3">
                 <input type="hidden" name="contact_number" />
                 <label><p>name</p></label>
                 <input id="userName" type="text" name="user_name" class="bg-transparent border-solid border-2 border-red-500 focus:shadow-inner focus:outline-none hover:shadow-inner hover:cursor-pointer"/>
@@ -83,16 +81,16 @@
               </form>
             </div>
           </div>
-          <div id="navbar" class="flex justify-center font-semibold bg-neutral-800/75 border-dashed border-l-2 border-t-2 border-r-2 border-b-2 border-red-500 shadow-md hover:cursor-pointer">
+          <div id="navbar" class="flex justify-center font-semibold bg-neutral-800/75 border-dashed border-2 border-red-500 shadow-md hover:cursor-pointer">
             <div id="home" class="hidden select-none">home</div>
             <div id="about" class="text-center w-1/2 py-4 select-none hover:text-shadow">about</div>
             <div id="reel" class="hidden select-none">reel</div>
             <div id="contact" class="text-center w-1/2 py-4 select-none hover:text-shadow">contact</div>
           </div>
         </div>
-      <div class="clickable left carat"></div>
-      <div class="clickable right carat"></div>
+        <div class="clickable left carat"></div>
+        <div class="clickable right carat"></div>
+      </div>
     </div>
-  </div>
   </body>
 </html>
